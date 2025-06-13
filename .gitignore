@@ -20,9 +20,20 @@ var/
 .installed.cfg
 *.egg
 
+# Flask
+instance/
+.webassets-cache
+.env
+.flaskenv
+
 # Virtual Environment
 venv/
 ENV/
+myenv/
+
+# Database
+*.db
+*.sqlite
 
 # IDE
 .idea/
@@ -30,14 +41,6 @@ ENV/
 *.swp
 *.swo
 
-# Flask
-instance/
-.webassets-cache
-
-# OS specific
+# OS
 .DS_Store
 Thumbs.db
-
-# Environment Variables
-.env
-.env.example
