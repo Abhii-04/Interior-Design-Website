@@ -1,52 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Decorilla Blog Page</title>
-  <!-- CSS file -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles/blog.css') }}">
-</head>
-<body>
+{% extends "base.html" %}
 
-  <header>
-    <h1>Decorilla Interior Design Blog</h1>
-    <p>Explore the latest trends & tips in home decoration</p>
-  </header>
+{% block title %}Blog - Interior Design Tips & Inspiration{% endblock %}
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Design Tips</a>
-    <a href="#">Inspiration</a>
-    <a href="#">Online Interior Design</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <div class="container">
-    <div class="blog-post">
-      <img src="https://via.placeholder.com/900x400" alt="Living Room Design"/>
-      <h2>10 Modern Living Room Ideas You’ll Love</h2>
-      <p>Looking to give your living space a refresh? Check out these top designer picks that mix comfort and style in the most inspiring ways.</p>
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-5">Interior Design Blog</h1>
+    
+    <!-- Featured Post -->
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <div class="card featured-post">
+                <img src="https://cdn.decorilla.com/images/1200/4b606d9a-94be-4e1e-b912-5e107b0ef3ed/Blue-White-Kitchen-Rustic-Home-Design-Rendering.jpg" class="card-img-top" alt="Featured Post">
+                <div class="card-body">
+                    <h2 class="card-title">Latest Trends in Kitchen Design for 2024</h2>
+                    <p class="card-text">Discover the most popular kitchen design trends that are making waves this year, from sustainable materials to smart technology integration.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="blog-post">
-      <img src="https://via.placeholder.com/900x400" alt="Small Space Makeover"/>
-      <h2>Before and After: Small Space Interior Transformation</h2>
-      <p>This tiny apartment got a big makeover! See how smart design choices can maximize style in compact homes.</p>
+    <!-- Blog Posts Grid -->
+    <div class="row">
+        <!-- Post 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://cdn.decorilla.com/images/1200/fb9af78e-95bc-4eec-a185-ae1ade6894c6/Eclectic-Formal-Living-Room-Interior-Design-Rendering.jpg" class="card-img-top" alt="Living Room Design">
+                <div class="card-body">
+                    <h3 class="card-title">How to Create a Cozy Living Room</h3>
+                    <p class="card-text">Learn the secrets to designing a warm and inviting living space that your family will love.</p>
+                    <a href="#" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://cdn.decorilla.com/images/1200/a6e50faf-b4b4-4636-ac9c-7336f3f74175/SpaInspired-Master-Bathroom-Design-Rendering.jpg" class="card-img-top" alt="Bathroom Design">
+                <div class="card-body">
+                    <h3 class="card-title">Spa-Inspired Bathroom Ideas</h3>
+                    <p class="card-text">Transform your bathroom into a luxurious retreat with these spa-inspired design tips.</p>
+                    <a href="#" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="https://cdn.decorilla.com/images/1200/2d8bb3bd-f143-4d72-b9fb-f39b1b5a484e/Glam-Elegant-Home-Interior-Design-Rendering.jpg" class="card-img-top" alt="Bedroom Design">
+                <div class="card-body">
+                    <h3 class="card-title">Bedroom Design: Creating Your Perfect Sanctuary</h3>
+                    <p class="card-text">Expert tips for designing a bedroom that promotes relaxation and better sleep.</p>
+                    <a href="#" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="blog-post">
-      <img src="https://via.placeholder.com/900x400" alt="Top Designers"/>
-      <h2>Meet the Top Interior Designers of 2025</h2>
-      <p>From timeless elegance to bold minimalism, meet the professionals redefining interior aesthetics this year.</p>
+    <!-- Categories Section -->
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h2 class="mb-4">Categories</h2>
+            <div class="d-flex flex-wrap gap-2">
+                <a href="#" class="btn btn-outline-secondary">Kitchen Design</a>
+                <a href="#" class="btn btn-outline-secondary">Living Room</a>
+                <a href="#" class="btn btn-outline-secondary">Bathroom</a>
+                <a href="#" class="btn btn-outline-secondary">Bedroom</a>
+                <a href="#" class="btn btn-outline-secondary">Color Schemes</a>
+                <a href="#" class="btn btn-outline-secondary">Furniture</a>
+                <a href="#" class="btn btn-outline-secondary">Lighting</a>
+                <a href="#" class="btn btn-outline-secondary">Small Spaces</a>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <footer>
-    © 2025 Decorilla. All rights reserved. | <a href="#">Privacy Policy</a>
-  </footer>
-
-  <!-- JS file -->
-  <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
-</body>
-</html>
+</div>
+{% endblock %} 
