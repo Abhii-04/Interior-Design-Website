@@ -1,0 +1,6 @@
+theme: jekyll-theme-cayman
+title: Interior Design Website
+description: A Flask-based web application for interior design services
+show_downloads: true
+github:
+  repository_url: https://github.com/Abhii-04/Interior-Design-Website
