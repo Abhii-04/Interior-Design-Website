@@ -2,6 +2,7 @@ services:
   - type: web
     name: interior-design-website
     env: python
+    runtime: python-3.12
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn run_app:app
     envVars:
