@@ -10,13 +10,8 @@ class Config:
     if os.environ.get('DATABASE_URL'):
         SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
     else:
-        # Local PostgreSQL settings
-        POSTGRES_USER = 'postgres'  # default superuser
-        POSTGRES_PASSWORD = 'qwertyuiop'  # replace with the password you set during installation
-        POSTGRES_HOST = 'localhost'
-        POSTGRES_PORT = '5432'
-        POSTGRES_DB = 'interior_design'
-        SQLALCHEMY_DATABASE_URI = f'postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}'
+        # Use Render PostgreSQL connection string as default
+        SQLALCHEMY_DATABASE_URI = 'postgresql://interior_website_user:JRFWFFhBrxOsPCnAud7UTlqfHZNZsJfl@dpg-d1th3gadbo4c73dj8tdg-a/interior_website'
     
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     
