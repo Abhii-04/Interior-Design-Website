@@ -11,6 +11,11 @@ from config import Config
 
 app = Flask(__name__)
 app.config.from_object(Config)
+
+# Ensure DATABASE_URL from environment is used (for production deployment)
+if os.environ.get('DATABASE_URL'):
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
